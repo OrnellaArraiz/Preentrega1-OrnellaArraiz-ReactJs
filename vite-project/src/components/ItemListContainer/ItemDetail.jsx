@@ -9,11 +9,11 @@ const ItemDetail = ({ item, isLoading }) => {
     }
     
     return (
-    <div>
-        <h1>{item.name}</h1>
-        <p>${item.price}</p>
-        <p>{item.category}</p>
-    </div>
+        <div className="card-body">
+            <h2 className="card-title">{item.name}</h2>
+            <p className="card-text">${item.price}</p>
+            <p className="card-text">{item.category}</p>
+        </div>
     );
 };
 
