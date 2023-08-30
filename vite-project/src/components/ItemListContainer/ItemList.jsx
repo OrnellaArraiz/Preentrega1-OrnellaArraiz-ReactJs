@@ -8,16 +8,19 @@ const ItemList = ({ items, isLoading }) => {
     
     return (
     <div className="container">
-        <h1 className="text-center mb-4">Producto</h1>
+        <h1 className="text-center mb-4">Productos</h1>
         <ul className="list-group">
             {items.map((item) => (
             <li className="list-group-item" key={item.id}>
                 <Link to={`/item/${item.id}`} className="text-decoration-none">
-                    <div className="d-flex justify-content-between align-items-center">
-                        <h3 className="mb-0">{item.name}</h3>
+                    <div className="d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+                        <div className="mb-2 mb-md-0">
+                            <h3 className="mb-0">{item.name}</h3>
+                            <p className="mb-0">{item.category}</p>
+                        </div>
+                        <img src={item.image} alt={`Imagen de ${item.name}`} className="img-fluid rounded" style={{ maxWidth: '150px', maxHeight: '150px' }} />
                         <span className="badge bg-primary">${item.price}</span>
                     </div>
-                    <p className="mb-0">{item.category}</p>
                 </Link>
             </li>
             ))}
