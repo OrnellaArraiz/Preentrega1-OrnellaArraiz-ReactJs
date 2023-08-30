@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <h1 className="navbar-brand"> 
-            <Link to="/">La Relojería</Link>
+            <Link to="/" className="text-decoration-none">La Relojería</Link>
           </h1>
 
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,10 +25,11 @@ const Navbar = () => {
                     <NavLink className="nav-link" to="/category/accessories">Accesorios</NavLink>
                 </li>
             </ul>
-        </div>
+          </div>
+          <div>
+            <CartWidget />
+          </div>
         </nav>
-  
-        <CartWidget/>
       </div>
     );
 };

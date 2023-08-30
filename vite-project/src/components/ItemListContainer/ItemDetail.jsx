@@ -12,6 +12,7 @@ const ItemDetail = ({ item, isLoading }) => {
         <div className="card-body">
             <h2 className="card-title">{item.name}</h2>
             <p className="card-text">${item.price}</p>
+            <img src={item.image} alt={item.name} className="img-fluid"/>
             <p className="card-text">{item.category}</p>
         </div>
     );
